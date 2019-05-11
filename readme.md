@@ -1,20 +1,23 @@
-# Study with Book
+# Data Science with Book
 #### 책으로 공부하는 Machine Learning / Deep Learning 을 담습니다.
 
 ##  \# Book List
-#### 1. [PyTorch를 활용한 머신러닝, 딥러닝 철저 입문](https://github.com/jeina7/Book_studying#1-pytorch를-활용한-머신러닝-딥러닝-철저-입문)
-#### 2. [밑바닥부터 시작하는 딥러닝 2](https://github.com/jeina7/Book_studying#2-밑바닥부터-시작하는-딥러닝-2)
+#### 1. [PyTorch를 활용한 머신러닝, 딥러닝 철저 입문](https://github.com/jeina7/Book_studying#1-pytorch%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%B2%A0%EC%A0%80-%EC%9E%85%EB%AC%B8-1)
+#### 2. [밑바닥부터 시작하는 딥러닝 2](https://github.com/jeina7/Book_studying#2-%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D-2-1)
+
+
+
 
 ---
-## 1. PyTorch를 활용한 머신러닝, 딥러닝 철저 입문 
+## 1. PyTorch를 활용한 머신러닝, 딥러닝 철저 입문
 (Book → [here](https://wikibook.co.kr/pytorch/))
-#### 저자 : 코이즈미 사토시 ||  출판사 : 위키북스
+#### \# 저자 : 코이즈미 사토시 ||  출판사 : 위키북스
 #### \# 날짜 : 2019, 2월
 #### \# 후기
 PyTorch를 입문하면서 다양한 예제들을 가볍게 훑고 넘어가기에 참 좋은 책입니다.   
 단순한 분류 / CNN 등의 예제만 있는 게 아니라, 자연어, 시계열 등의 여러가지 데이터를 다루는 예제가 있어서 좋았습니다.
 예제 위주로 구성되어 있는 책인만큼, 코드를 꼭 직접 따라쳐보면서 읽어보시는 걸 추천합니다.
-#### \# 예제 모델 / 성능 확인 : [Here!](https://github.com/jeina7/Book_studying/tree/master/01_PyTorch_introduction)
+#### \# 예제 모델 / 성능 확인 : [Here!](https://github.com/jeina7/Book_studying/tree/master/01_PyTorch_introduction#pytorch%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%B2%A0%EC%A0%80-%EC%9E%85%EB%AC%B8)
 #### \# Overview
 1. [[Chapter 5-5] 와인 분류하기 (1)](https://github.com/jeina7/Book_studying/blob/master/01_PyTorch_introduction/Chapter_5.5_%EC%99%80%EC%9D%B8%EB%B6%84%EB%A5%98%ED%95%98%EA%B8%B0(1).ipynb)  
 sklearn의 와인 데이터의 분류 문제로 간단한 Two Layer Net을 구현하는 예제입니다.  
@@ -51,7 +54,7 @@ Auto Encoder (자동 부호화기) 기법을 이용합니다.
 
 ## 2. 밑바닥부터 시작하는 딥러닝 2
 (Book → [here](http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853))  
-#### 저자 : 사이토 고키 ||  출판사 : 한빛미디어
+#### \# 저자 : 사이토 고키 ||  출판사 : 한빛미디어
 #### \# 날짜 : 2019, 5월
 
 ...현재 공부중...
