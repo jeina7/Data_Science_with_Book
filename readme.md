@@ -4,7 +4,7 @@
 ##  \# Book List
 #### 1. [PyTorch를 활용한 머신러닝, 딥러닝 철저 입문](https://github.com/jeina7/Book_studying#1-pytorch%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%B2%A0%EC%A0%80-%EC%9E%85%EB%AC%B8-1)
 #### 2. [밑바닥부터 시작하는 딥러닝 2](https://github.com/jeina7/Book_studying#2-%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D-2-1)
-
+#### 3. [핸즈온 머신러닝]()
 
 
 
@@ -55,6 +55,15 @@ Auto Encoder (자동 부호화기) 기법을 이용합니다.
 ## 2. 밑바닥부터 시작하는 딥러닝 2
 (Book → [here](http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853))  
 #### \# 저자 : 사이토 고키 ||  출판사 : 한빛미디어
+#### \# 날짜 : 2019, 5월
+
+...현재 공부중...
+
+---
+
+## 3. 핸즈온 머신러닝
+(Book → [here](http://www.hanbit.co.kr/store/books/look.php?p_code=B9267655530))
+#### \# 저자 : 오렐리앙 제롱 || 번역 : 박해선 || 출판사 : 한빛미디어
 #### \# 날짜 : 2019, 5월
 
 ...현재 공부중...
