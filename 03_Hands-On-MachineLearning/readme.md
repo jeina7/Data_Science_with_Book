@@ -6,6 +6,8 @@
 # Part 1. 머신러닝
 
 ## Ch.01 한 눈에 보는 머신러닝
+[click!](https://github.com/jeina7/Book_studying/blob/master/03_Hands-On-MachineLearning/Chapter1-Exercise.md#-%ED%95%B8%EC%A6%88%EC%98%A8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%E3%85%A4-hands-on-machine-learning)
+
 
 ## Ch.02 머신러닝 프로젝트 처음부터 끝까지
 
