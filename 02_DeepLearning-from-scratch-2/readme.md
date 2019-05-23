@@ -6,6 +6,7 @@
 #### \# 이 책의 가장 큰 특징 : `Numpy만 사용해서 딥러닝 구현하기`
 이 책은 이미 잘 구축되어 있는 딥러닝 라이브러리(`tensorflow`, `PyTorch`)를 배제하고 예외적으로 **numpy만을(!)** 이용해서 거의 모든 코드를 구현합니다. 코드 한 줄 한 줄 따라치면서 이해해보면, 딥러닝이 진짜 어떤 식으로 구동되는지 좀 더 깊게 이해할 수 있게 되는 것 같습니다.
 - 직접 구현한 코드모음 → [click!](https://github.com/jeina7/Book_studying/tree/master/02_DeepLearning-from-scratch-2/common)
+
     - 신경망모델([net.py](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/common/net.py))
     - 계층([layer.py](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/common/layer.py))
     - 신경망 내 함수([function.py](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/common/function.py))
@@ -16,14 +17,14 @@
 
 ---
 ## Ch.1 신경망 복습
-- 코드 활용 & 실습 → [click!](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.1%5D%20Layers%2C%20TwoLayerNet%2C%20Trainer.ipynb)
+- 코드 활용 & 실습 → [click!](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.1%5D%20Layers%2C%20TwoLayerNet%2C%20Trainer.ipynb)   
 `[밑바닥부터 시작하는 딥러닝 1]`에서 자세히 설명한 신경망 내용들을 조금 간추려서 설명하고, 무엇보다 신경망의 완전연결계층 / 활성화 함수 등을 직접 구현해볼 수 있습니다. 밑러닝 1권을 안보셨다면 이 단원에서 신경망에 대한 전체적인 내용을 간략하지만 자세히 훑어볼 수 있고, 1권을 보셨다고 해도 다시 복습 & 정리하는 데에 도움이 많이 됩니다. 밑러닝 1권을 읽을 때 코드를 직접 구현해보지 않으셨다면 이번에는 해보는 것을 추천합니다! (제가 그랬습니다 ㅎ-ㅎ)     
 
 
 
 
 ## Ch.2 자연어와 단어의 분산 표현
-- 코드 활용 & 실습 → [click!](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.2%5D%20corpus%2C%20co-occurence%20matrix%2C%20similarity%2C%20ppmi%2C%20visualize_2D.ipynb)
+- 코드 활용 & 실습 → [click!](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.2%5D%20corpus%2C%20co-occurence%20matrix%2C%20similarity%2C%20ppmi%2C%20visualize_2D.ipynb)   
 머신러닝/딥러닝 세계에서의 자연어에 처음으로 들어가는 장입니다. 자연어와 신경망을 합치기에 앞서서 전통적인 **"통계 기반 기법"** 의 자연어 처리에 대해 먼저 살펴봅니다. 앞으로 나올 복잡하고 어려운 자연어 세상에 들어가기 전에 가장 기본적인 개념을 이해하고 넘어갈 수 있도록 도와주는 내용들로 구성되어 있습니다.     
 통계 기반 기법은 단어의 출현 **"빈도"** 에 의존해서 단어 간의 관계를 예측 & 분석하는 방법입니다. 직접 10000단어로 이루어진 **`PTB 데이터셋`** 을 이용해서 말뭉치 생성, 동시발생 행렬 생성, 차원축소 등을 모두 실습할 수 있는 코드도 있으니 여러 실험을 해 보시길 추천합니다.
 
@@ -45,7 +46,7 @@
 
 
 
-## Ch.6 게이트가 추가된 randn
+## Ch.6 게이트가 추가된 RNN
 
 
 

@@ -6,7 +6,7 @@
 # Part 1. 머신러닝
 
 ## Ch.01 한 눈에 보는 머신러닝
-- 연습문제 정리내용 → [click!](https://github.com/jeina7/Book_studying/blob/master/03_Hands-On-MachineLearning/Chapter1-Exercise.md#-%ED%95%B8%EC%A6%88%EC%98%A8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%E3%85%A4-hands-on-machine-learning)
+- 연습문제 정리내용 → [click!](https://github.com/jeina7/Book_studying/blob/master/03_Hands-On-MachineLearning/Chapter1-Exercise.md#-%ED%95%B8%EC%A6%88%EC%98%A8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%E3%85%A4-hands-on-machine-learning)    
 머신러닝 전반의 내용과 키워드에 대한 설명이 잘 담겨있습니다. 연습문제에 19가지의 질문이 있어서 그에 대한 답을 직접 정리해 보는 것이 개념을 정리하는 데에 도움이 됩니다.  
 
 
