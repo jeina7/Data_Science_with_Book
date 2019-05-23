@@ -69,15 +69,15 @@ Auto Encoder (자동 부호화기) 기법을 이용합니다.
     - 기타함수([util.py](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/common/util.py))
 #### \# 책 내용 Keyword로 엿보기 : [Here!](https://github.com/jeina7/Book_studying/tree/master/02_DeepLearning-from-scratch-2#%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D-2)
 #### \# Overview
-1. [[Chapter 1] 신경망 복습](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.1%5D%20Layers%2C%20TwoLayerNet%2C%20Trainer.ipynb)
+1. [[Chapter 1] 신경망 복습](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.1%5D%20Layers%2C%20TwoLayerNet%2C%20Trainer.ipynb)   
 `[밑바닥부터 시작하는 딥러닝 1]`에서 자세히 설명한 신경망 내용들을 조금 간추려서 설명하고, 무엇보다 신경망의 완전연결계층 / 활성화 함수 등을 직접 구현해볼 수 있습니다. 밑러닝 1권을 안보셨다면 이 단원에서 신경망에 대한 전체적인 내용을 간략하지만 자세히 훑어볼 수 있고, 1권을 보셨다고 해도 다시 복습 & 정리하는 데에 도움이 많이 됩니다. 만약 1권을 읽을 때 코드를 직접 구현해보지 않으셨다면 이번에는 해보는 것을 추천합니다! (제가 그랬습니다 ㅎ-ㅎ)
 
-1. [[Chapter 2] 자연어와 단어의 분산 표현](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.2%5D%20corpus%2C%20co-occurence%20matrix%2C%20similarity%2C%20ppmi%2C%20visualize_2D.ipynb)
+1. [[Chapter 2] 자연어와 단어의 분산 표현](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.2%5D%20corpus%2C%20co-occurence%20matrix%2C%20similarity%2C%20ppmi%2C%20visualize_2D.ipynb)   
 머신러닝/딥러닝 세계에서의 자연어에 처음으로 들어가는 장입니다. 자연어와 신경망을 합치기에 앞서서 전통적인 **"통계 기반 기법"** 의 자연어 처리에 대해 먼저 살펴봅니다. 앞으로 나올 복잡하고 어려운 자연어 세상에 들어가기 전에 가장 기본적인 개념을 이해하고 넘어갈 수 있도록 도와주는 내용들로 구성되어 있습니다. 직접 10000단어로 이루어진 **`PTB 데이터셋`** 을 이용해서 말뭉치 생성, 동시발생 행렬 생성, 차원축소 등을 모두 실습할 수 있는 코드도 있으니 여러 실험을 해 보시길 추천합니다.
 
 
 
-...현재 공부중...
+...이 뒤는 아직 공부중...
 
 ---
 
@@ -87,9 +87,9 @@ Auto Encoder (자동 부호화기) 기법을 이용합니다.
 #### \# 날짜 : 2019, 5월
 #### \# 책 내용 Keyword로 엿보기 : [Here!](https://github.com/jeina7/Book_studying/tree/master/03_Hands-On-MachineLearning#%ED%95%B8%EC%A6%88%EC%98%A8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D)
 #### \# Overview
-1. [[Chapter 1] 한 눈에 보는 머신러닝]
+1. [[Chapter 1] 한 눈에 보는 머신러닝]   
 진짜 머신러닝을 한 눈에 봅니다! 머신러닝 전반의 내용과 키워드에 대한 설명이 잘 담겨있습니다. 연습문제에 19가지의 질문이 있어서 그에 대한 답을 직접 정리해 보는 것이 개념을 정리하는 데에 도움이 됩니다.   
 - 연습문제 정리내용 → [click!](https://github.com/jeina7/Book_studying/blob/master/03_Hands-On-MachineLearning/Chapter1-Exercise.md#-%ED%95%B8%EC%A6%88%EC%98%A8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%E3%85%A4-hands-on-machine-learning)
 
 
-...현재 공부중...
+...이 뒤는 아직 공부중...
