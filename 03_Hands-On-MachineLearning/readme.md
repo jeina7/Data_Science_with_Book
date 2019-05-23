@@ -6,11 +6,11 @@
 # Part 1. 머신러닝
 
 ## Ch.01 한 눈에 보는 머신러닝
-- 연습문제 정리내용 → [click!](https://github.com/jeina7/Book_studying/blob/master/03_Hands-On-MachineLearning/Chapter1-Exercise.md#-%ED%95%B8%EC%A6%88%EC%98%A8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%E3%85%A4-hands-on-machine-learning)    
-
-
-머신러닝 전반의 내용과 키워드에 대한 설명이 잘 담겨있습니다. 연습문제에 19가지의 질문이 있어서 그에 대한 답을 직접 정리해 보는 것이 개념을 정리하는 데에 도움이 됩니다.  
-
+- Keywords
+`#머신러닝` `#지도학습` `#비지도학습` `#강화학습` `#분류` `#회귀` `#클러스터링` `#군집`
+`#배치학습` `#미니배치학습` `#모델파라미터` `#하이퍼파라미터` `#오버피팅` `#언더피팅`  
+`#훈련데이터` `#검증데이터` `#테스트데이터` `#교차검증`
+- 연습문제 정리내용 → [click!](https://github.com/jeina7/Book_studying/blob/master/03_Hands-On-MachineLearning/Chapter1-Exercise.md#-%ED%95%B8%EC%A6%88%EC%98%A8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%E3%85%A4-hands-on-machine-learning)
 
 
 
