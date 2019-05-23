@@ -56,6 +56,7 @@ Auto Encoder (자동 부호화기) 기법을 이용합니다.
 (Book → [here](http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853))  
 #### \# 저자 : 사이토 고키 ||  출판사 : 한빛미디어
 #### \# 날짜 : 2019, 5월
+#### \# 더 구체적인 책 구성내용 : [Here!](https://github.com/jeina7/Book_studying/tree/master/02_DeepLearning-from-scratch-2#%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D-2)
 
 ...현재 공부중...
 
@@ -65,5 +66,6 @@ Auto Encoder (자동 부호화기) 기법을 이용합니다.
 (Book → [here](http://www.hanbit.co.kr/store/books/look.php?p_code=B9267655530))
 #### \# 저자 : 오렐리앙 제롱 || 출판사 : 한빛미디어
 #### \# 날짜 : 2019, 5월
+#### \# 더 구체적인 책 구성내용 : [Here!](https://github.com/jeina7/Book_studying/tree/master/03_Hands-On-MachineLearning#%ED%95%B8%EC%A6%88%EC%98%A8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D)
 
 ...현재 공부중...
