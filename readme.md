@@ -75,12 +75,18 @@ Auto Encoder (자동 부호화기) 기법을 이용합니다.
 1. [[Chapter 2] 자연어와 단어의 분산 표현](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.2%5D%20corpus%2C%20co-occurence%20matrix%2C%20similarity%2C%20ppmi%2C%20visualize_2D.ipynb)   
 머신러닝/딥러닝 세계에서의 자연어에 처음으로 들어가는 장입니다. 앞으로 나올 복잡하고 어려운 자연어 세상에 들어가기 전에 가장 기본적인 개념을 이해하고 넘어갈 수 있도록 도와주는 내용들로 구성되어 있습니다. 직접 10000단어로 이루어진 **`PTB 데이터셋`** 을 이용해서 말뭉치 생성, 동시발생 행렬 생성, 차원축소 등을 모두 실습할 수 있는 코드도 있으니 여러 실험을 해 보시길 추천합니다.
 
+1. [[Chapter 3] word2vec](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.3%5D%20Training%20Simple%20CBOW%20and%20get%20WordVector.ipynb)
+word2vec 개념에 대해 처음 배워보는 장입니다! 앞서 배운 통계기반 기법과 추론기반 기법 두 가지 방법의 장단점에 대해 비교해보고, word2vec의 모델인 CBOW와 skip-gram 모델 두 가지를 설명합니다. 이 중 특히 CBOW 모델은 아주 간단한 데이터셋으로 직접 구현해보고, 훈련까지 시켜서 손실함수가 어떻게 떨어지는지까지 확인해봅니다.
 
+ㅤ　
 
 ...이 뒤는 아직 공부중...
 
 
 
+ㅤ　
+ㅤ
+ㅤ　
 
 
 ---
@@ -95,5 +101,6 @@ Auto Encoder (자동 부호화기) 기법을 이용합니다.
 진짜 머신러닝을 한 눈에 봅니다! 머신러닝 전반의 내용과 키워드에 대한 설명이 잘 담겨있습니다. 연습문제에 19가지의 질문이 있어서 그에 대한 답을 직접 정리해 보는 것이 개념을 정리하는 데에 도움이 됩니다.   
 - 연습문제 정리내용 → [click!](https://github.com/jeina7/Book_studying/blob/master/03_Hands-On-MachineLearning/Chapter1-Exercise.md#-%ED%95%B8%EC%A6%88%EC%98%A8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%E3%85%A4-hands-on-machine-learning)
 
+ㅤ　
 
 ...이 뒤는 아직 공부중...
