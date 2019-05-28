@@ -18,8 +18,7 @@
 `#자연어처리` `#시소러스` `#통계기반기법` `#동시발생행렬` `#WordNet` `#유사도` `#PTB데이터셋` `#말뭉치`
 - 코드 활용 & 실습 → [click!](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.2%5D%20corpus%2C%20co-occurence%20matrix%2C%20similarity%2C%20ppmi%2C%20visualize_2D.ipynb)   
 
-
-
+ㅤㅤㅤ　
 
 
 
@@ -29,9 +28,7 @@
 `#추론기반기법` `#word2vec` `#CBOW` `#skip-gram` `#분산표현` `#원핫인코딩` `#음의로그가능도`
 - 코드 활용 & 실습 → [click!](https://github.com/jeina7/Book_studying/blob/master/02_DeepLearning-from-scratch-2/%5BChap.3%5D%20Training%20Simple%20CBOW%20and%20get%20WordVector.ipynb)
 
-
-
-
+ㅤㅤㅤ　
 
 
 
@@ -39,36 +36,28 @@
 ## Ch.4 word2vec 속도 개선
 
 
-
-
-
+ㅤㅤㅤ　
 
 
 
 
 ## Ch.5 순환 신경망 (RNN)
 
-
-
-
+ㅤㅤㅤ　
 
 
 
 
 ## Ch.6 게이트가 추가된 RNN
 
-
-
-
+ㅤㅤㅤ　
 
 
 
 
 ## Ch.7 RNN을 사용한 문장 생성
 
-
-
-
+ㅤㅤㅤ　
 
 
 
