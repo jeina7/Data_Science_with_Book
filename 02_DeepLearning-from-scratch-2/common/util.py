@@ -113,3 +113,37 @@ def visualize_2D(U, word_to_id):
         plt.annotate(word, (U[word_id, 0], U[word_id, 1]))
     plt.scatter(U[:, 0], U[:, 1], alpha=0.5)
     plt.show()
+
+
+def create_contexts_target(corpus, window_size=1):
+    # get all target in corpus
+    target = corpus[window_size:-window_size]
+
+    contexts = []
+    for idx in range(window_size, len(corpus)-window_size):
+        context = []
+        for word_idx in range(-window_size, window_size+1):
+            if word_idx == 0:
+                continue
+            context.append(corpus[idx+word_idx])
+        contexts.append(context)
+
+    return np.array(contexts), np.array(target)
+
+
+def convert_one_hot(vector, vocab_size):
+    N = vector.shape[0]
+
+    if vector.ndim == 1:
+        one_hot = np.zeros((N, vocab_size), dtype=np.int32)
+        for idx, word_id in enumerate(vector):
+            one_hot[idx, word_id] = 1
+
+    elif vector.ndim == 2:
+        C = vector.shape[1]
+        one_hot = np.zeros((N, C, vocab_size), dtype=np.int32)
+        for idx_0, word_ids in enumerate(vector):
+            for idx_1, word_id in enumerate(word_ids):
+                one_hot[idx_0, idx_1, word_id] = 1
+
+    return one_hot
