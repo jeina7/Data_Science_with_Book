@@ -4,6 +4,7 @@
 import time
 import numpy as np
 import matplotlib.pyplot as plt
+from .util import clip_grads
 
 
 class Trainer:
@@ -38,19 +39,25 @@ class Trainer:
 
                 # back propagation
                 model.backward()
+                # 공유되어서 중복된 가중치는 하나만 남겨두기
+                params, grads = remove_duplicate(model.params, model.grads)
+
+                # max_grad값 있으면 그 값에 맞게 조정
+                if max_grad is not None:
+                    clip_grads(grads, max_grad)
 
                 # update gradient
-                optimizer.update(model.params, model.grads)
+                optimizer.update(params, grads)
 
                 curr_loss += loss
                 loss_count += 1
-                
+
                 # save loss
                 if (iters+1) % self.log_step == 0:
                     avg_loss = curr_loss / loss_count
                     self.loss_list.append(avg_loss)
                     curr_loss, loss_count = 0, 0
-                
+
                 # evaluation
                 if epoch_log_step:
                     if ((epoch+1) % epoch_log_step == 0) & ((iters+1) % self.log_step == 0):
@@ -73,3 +80,32 @@ class Trainer:
         plt.xlabel('iteration (x' + str(self.log_step) + ')')
         plt.ylabel('loss')
         plt.show()
+
+
+def remove_duplicate(params, grads):
+    '''
+    매개변수 중 중복되는 가중치는 하나로 모아서 가중치 업데이트 시 오류가 없게 한다.
+    '''
+    while True:
+        flag = False
+        L = len(params)
+
+        for i in range(0, L-1):
+            for j in range(i+1, L):
+                if params[i] is params[j]:
+                    grads[i] += grads[j]
+                    flag = True
+                    params.pop(j)
+                    grads.pop(j)
+                elif (params[i].ndim == 2) and (params[j].ndim == 2) and (params[i].T.shape == params[j].shape) and np.all(params[i].T == params[j]):
+                    grads[i] += grads[j].T
+                    flag = True
+                    params.pop(j)
+                    grads.pop(j)
+
+                if flag: break
+            if flag: break
+
+        if not flag: break
+
+    return params, grads
