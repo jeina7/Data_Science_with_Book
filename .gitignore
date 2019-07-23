@@ -1,3 +1,4 @@
+dataset-housing/
 *.ipynb_checkpoints
 *.DS_Store
 *.csv
