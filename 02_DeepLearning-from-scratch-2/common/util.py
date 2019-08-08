@@ -2,6 +2,8 @@
 # 필요한 Utility functions
 
 import numpy as np
+import collections
+
 
 def preprocess(text):
     # 전처리
@@ -159,3 +161,36 @@ def clip_grads(grads, max_norm):
     if rate < 1:
         for grad in grads:
             grad *= rate
+
+
+class UnigramSampler:
+    def __init__(self, corpus, power, sample_size):
+        self.sample_size = sample_size
+        self.vocab_size = len(set(corpus))
+        self.word_p = np.zeros(self.vocab_size)
+
+        # 각 단어가 몇 번씩 나오는지 저장
+        counts = collections.Counter(corpus)
+
+        # 각 단어의 출현횟수를 확률로 변환하여 word_p에 저장
+        self.word_p = [counts[i] for i in range(self.vocab_size)]
+        self.word_p = np.power(self.word_p, power)
+        self.word_p /= np.sum(self.word_p)
+
+    def get_negative_sample(self, target):
+        batch_size = target.shape[0]
+
+        negative_sample = np.zeros((batch_size, self.sample_size), dtype=np.int32)
+
+        for i in range(batch_size):
+            p = self.word_p.copy()
+
+            # target은 뽑히지 않도록 하기 위해 확률을 0으로 설정
+            target_idx = target[i]
+            p[target_idx] = 0
+
+            p /= p.sum()
+            negative_sample[i, :] = np.random.choice(self.vocab_size, size=self.sample_size, \
+                                                     replace=False, p=p)
+
+        return negative_sample
