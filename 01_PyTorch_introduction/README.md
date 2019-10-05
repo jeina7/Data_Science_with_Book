@@ -33,6 +33,13 @@ sklearn의 와인 데이터의 분류 문제로 간단한 Two Layer Net을 구�
 - runtime : 0.8s
 - accuracy : 57.7%
 
+
+ㅤㅤㅤ　
+
+
+
+
+
 ---
 ## 2. [[Chapter 6-2] 예제: 와인 분류하기 (2)](https://nbviewer.jupyter.org/github/jeina7/Book_studying/blob/master/01_PyTorch_introduction/Chapter_6.2_%EC%99%80%EC%9D%B8%EB%B6%84%EB%A5%98%ED%95%98%EA%B8%B0%282%29.ipynb)
 1번 예제에서 layer 개수를 6층으로 늘려서 깊은 층을 사용한 신경망의 성능을 알아보고, 두 층만 사용한 신경망과 비교합니다.
@@ -60,6 +67,13 @@ sklearn의 와인 데이터의 분류 문제로 간단한 Two Layer Net을 구�
 - accuracy : 92.3%
 > 두 층만 썼던 1번의 예제에서 6층으로 늘렸을 때 정확도가 크게 오른 것을 확인할 수 있다.
 
+
+ㅤㅤㅤ　
+
+
+
+
+
 ---
 ## 3. [[Chapter 6-3] 예제: 손글씨 이미지 분류 (1)](https://nbviewer.jupyter.org/github/jeina7/Book_studying/blob/master/01_PyTorch_introduction/Chapter_6.3_%EC%86%90%EA%B8%80%EC%94%A8%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B6%84%EB%A5%98%281%29.ipynb)
 MNIST 데이터를 완전연결층으로 이루어진 신경망으로 분류해보는 예제입니다.  
@@ -86,6 +100,13 @@ CNN을 쓰지 않고 Linear한 데이터로써 신경망에 입력했을 때의 
 - epoch : 20 (1000 iteration)
 - runtime : 3m 47s
 - accuracy : 90.6%
+
+
+ㅤㅤㅤ　
+
+
+
+
 
 ---
 ## 4. [[Chapter 6-4] 예제: 뉴스 기사 분류](https://nbviewer.jupyter.org/github/jeina7/Book_studying/blob/master/01_PyTorch_introduction/Chapter_6.4_%EB%89%B4%EC%8A%A4%EA%B8%B0%EC%82%AC%EB%B6%84%EB%A5%98.ipynb)
@@ -115,6 +136,13 @@ CNN을 쓰지 않고 Linear한 데이터로써 신경망에 입력했을 때의 
 - runtime : 7m 27s
 - accuracy : 72.3%
 
+
+ㅤㅤㅤ　
+
+
+
+
+
 ---
 ## 5. [[Chapter 6-5] 예제: 시계열데이터 - 이상기온 탐지](https://nbviewer.jupyter.org/github/jeina7/Book_studying/blob/master/01_PyTorch_introduction/Chapter_6.5_%EC%8B%9C%EA%B3%84%EC%97%B4%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%9D%B4%EC%83%81%EA%B8%B0%EC%98%A8%ED%83%90%EC%A7%80.ipynb)
 시계열데이터인 기온 데이터를 이용해서 이상탐지 (Anomaly Detection)을 진행해봅니다.  
@@ -141,6 +169,13 @@ Auto Encoder (자동 부호화기) 기법을 이용합니다.
 - epoch : 500 (60000 iteration)
 - runtime : 12.6s
 - Final loss (mse) : 1.8
+
+
+ㅤㅤㅤ　
+
+
+
+
 
 ---
 ## 6. [[Chapter 7-2] 예제: 손글씨 이미지 분류 (2)](https://nbviewer.jupyter.org/github/jeina7/Book_studying/blob/master/01_PyTorch_introduction/Chapter_7.2_%EC%86%90%EA%B8%80%EC%94%A8%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B6%84%EB%A5%98%282%29.ipynb)
@@ -170,6 +205,14 @@ Auto Encoder (자동 부호화기) 기법을 이용합니다.
 - accuracy : 96.6%
 > CNN을 사용하지 않은 손글씨이미지분류 (1) 에서보다 약 6% 오른 것을 확인할 수 있다.
 
+
+
+ㅤㅤㅤ　
+
+
+
+
+
 ---
 ## 7. [[Chapter 7-3] 예제: 옷 이미지 분류](https://nbviewer.jupyter.org/github/jeina7/Book_studying/blob/master/01_PyTorch_introduction/Chapter_7.3_%EC%98%B7%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B6%84%EB%A5%98.ipynb)
 이번엔 Fashion-MNIST 데이터를 이용해서 CNN 분류 문제를 풀어봅니다.  
@@ -195,6 +238,13 @@ Auto Encoder (자동 부호화기) 기법을 이용합니다.
 - epoch : 20 (1000 iteration)
 - runtime : 16m 32s
 - accuracy : 83.6%
+
+
+ㅤㅤㅤ　
+
+
+
+
 
 ---
 ## 8. [[Chapter 7-4] 예제: ants & bees 이미지 분류](https://nbviewer.jupyter.org/github/jeina7/Book_studying/blob/master/01_PyTorch_introduction/Chapter_7.4_ants_bees_%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B6%84%EB%A5%98.ipynb)
