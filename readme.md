@@ -5,7 +5,7 @@
 #### 1. [PyTorch를 활용한 머신러닝, 딥러닝 철저 입문](https://github.com/jeina7/Book_studying#1-pytorch%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%B2%A0%EC%A0%80-%EC%9E%85%EB%AC%B8-1)
 #### 2. [밑바닥부터 시작하는 딥러닝 2](https://github.com/jeina7/Book_studying#2-%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D-2-1)
 #### 3. [핸즈온 머신러닝](https://github.com/jeina7/Book_studying#3-%ED%95%B8%EC%A6%88%EC%98%A8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-1)
-#### 4. [PyTorch를 활용한 강화학습 / 심층강화학습 실전입문](https://github.com/jeina7/Book_studying#4-pytorch를-활용한-강화학습--심층강화학습-실전입문)
+#### 4. [PyTorch를 활용한 강화학습 / 심층강화학습 실전입문](https://github.com/jeina7/Book_studying#4-pytorch를-활용한-강화학습--심층강화학습-실전입문-1)
 
 ㅤ
 ㅤ　
