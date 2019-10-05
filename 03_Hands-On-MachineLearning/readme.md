@@ -1,4 +1,4 @@
-# Hands-on Machine Learning, 핸즈온 머신러닝
+# Hands-On Machine Learning, 핸즈온 머신러닝
 #### 저자 : 오렐리앙 제롱 || 출판사 : 한빛미디어
 
 
