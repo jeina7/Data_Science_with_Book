@@ -25,9 +25,8 @@
 
 ---
 ## 1. 인공지능, 머신러닝, 딥러닝 입문
-<img src="images/book_1.png" width="200">
+<a href="https://wikibook.co.kr/ai-by-algorithm/"><img src="images/book_1.png" width="200" style="display: inline;"></a> ← click!
 
-(Book → [here](https://wikibook.co.kr/ai-by-algorithm/))
 #### \# 저자 : 김의중 ||  출판사 : 위키북스
 #### \# 날짜 : 2019, 1월 ~ 3월
 #### \# 후기
@@ -38,9 +37,8 @@
 
 ---
 ## 2. 밑바닥부터 시작하는 딥러닝 1
-<img src="images/book_2.png" width="200">
+<a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198"><img src="images/book_2.png" width="200"  style="display: inline;"></a> ← click!
 
-(Book → [here](http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198))
 #### \# 저자 : 사이토 고키 ||  출판사 : 한빛미디어
 #### \# 날짜 : 2019, 2월 ~ 3월
 #### \# 후기
@@ -51,9 +49,8 @@
 
 ---
 ## 3. PyTorch를 활용한 머신러닝, 딥러닝 철저 입문
-<img src="images/book_3.png" width="200">
+<a href="https://wikibook.co.kr/pytorch/"><img src="images/book_3.png" width="200"  style="display: inline;"></a> ← click!
 
-(Book → [here](https://wikibook.co.kr/pytorch/))
 #### \# 저자 : 코이즈미 사토시 ||  출판사 : 위키북스
 #### \# 날짜 : 2019, 2월
 #### \# 후기
@@ -68,9 +65,8 @@ PyTorch를 입문하면서 다양한 예제들을 가볍게 훑고 넘어가기�
 
 ---
 ## 4. 파이썬 머신러닝 완벽가이드
-<img src="images/book_4.png" width="200">
+<a href="https://wikibook.co.kr/ml-definitive-guide/"><img src="images/book_4.png" width="200"  style="display: inline;"></a> ← click!
 
-(Book → [here](https://wikibook.co.kr/ml-definitive-guide/))
 #### \# 저자 : 권철민 ||  출판사 : 위키북스
 #### \# 날짜 : 2019, 3월 ~ 4월
 #### \# 후기
@@ -82,9 +78,8 @@ PyTorch를 입문하면서 다양한 예제들을 가볍게 훑고 넘어가기�
 ---
 
 ## 5. 밑바닥부터 시작하는 딥러닝 2
-<img src="images/book_5.png" width="200">
+<a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853"><img src="images/book_5.png" width="200"  style="display: inline;"></a> ← click!
 
-(Book → [here](http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853))  
 #### \# 저자 : 사이토 고키 ||  출판사 : 한빛미디어
 #### \# 날짜 : 2019, 5월
 #### \# 후기 → 이 책의 가장 큰 특징 : `Numpy만 사용해서 딥러닝 구현하기!`
@@ -106,9 +101,8 @@ PyTorch를 입문하면서 다양한 예제들을 가볍게 훑고 넘어가기�
 ---
 
 ## 6. 핸즈온 머신러닝
-<img src="images/book_6.png" width="200">
+<a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B9267655530"><img src="images/book_6.png" width="200"  style="display: inline;"></a> ← click!
 
-(Book → [here](http://www.hanbit.co.kr/store/books/look.php?p_code=B9267655530))
 #### \# 저자 : 오렐리앙 제롱 || 출판사 : 한빛미디어
 #### \# 날짜 : 2019, 5월
 #### \# 후기
@@ -128,9 +122,8 @@ PyTorch를 입문하면서 다양한 예제들을 가볍게 훑고 넘어가기�
 ---
 
 ## 7. PyTorch를 활용한 강화학습 / 심층강화학습 실전입문
-<img src="images/book_7.png" width="200">
+<a href="https://wikibook.co.kr/pytorch-drl/"><img src="images/book_7.png" width="200"  style="display: inline;"></a> ← click!
 
-(Book → [here](https://wikibook.co.kr/pytorch-drl/))
 #### \# 저자 : 오가와 유타로 || 출판사 : 위키북스
 #### \# 날짜 : 2019, 10월
 #### \# 후기
