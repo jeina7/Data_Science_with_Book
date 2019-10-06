@@ -25,7 +25,7 @@
 
 ---
 ## 1. 인공지능, 머신러닝, 딥러닝 입문
-<a href="https://wikibook.co.kr/ai-by-algorithm/"><img src="images/book_1.png" width="200" style="display: inline;"></a> ← click!
+<a href="https://wikibook.co.kr/ai-by-algorithm/" target="_blank"><img src="images/book_1.png" width="200" style="display: inline;"></a> ← click!
 
 #### \# 저자 : 김의중 ||  출판사 : 위키북스
 #### \# 날짜 : 2019, 1월 ~ 3월
@@ -37,7 +37,7 @@
 
 ---
 ## 2. 밑바닥부터 시작하는 딥러닝 1
-<a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198"><img src="images/book_2.png" width="200"  style="display: inline;"></a> ← click!
+<a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198" target="_blank"><img src="images/book_2.png" width="200"  style="display: inline;"></a> ← click!
 
 #### \# 저자 : 사이토 고키 ||  출판사 : 한빛미디어
 #### \# 날짜 : 2019, 2월 ~ 3월
