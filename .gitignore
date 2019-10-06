@@ -2,5 +2,6 @@ dataset-housing/
 *.ipynb_checkpoints
 *.DS_Store
 *.csv
+*.mp4
 *.env
 __pycache__/
