@@ -4,4 +4,5 @@ dataset-housing/
 *.csv
 *.mp4
 *.env
+*.pkl
 __pycache__/
