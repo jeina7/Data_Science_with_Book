@@ -5,9 +5,9 @@
 # 1) 모든 계층은 함수 forward()와 backward()를 가진다
 # 2) 모든 계층은 변수 params와 grads를 가진다
 
-import numpy as np
+import collections
+from .np import *
 from .function import softmax, cross_entropy_error
-from .util import UnigramSampler
 
 
 class Sigmoid:
@@ -93,7 +93,7 @@ class SigmoidWithLoss:
     def backward(self, dout=1):
         batch_size = self.t.shape[0]
 
-        dx = (self.y - sefl.t) * dout / batch_size
+        dx = (self.y - self.t) * dout / batch_size
         return dx
 
 
@@ -147,7 +147,10 @@ class Embedding:
         dW[...] = 0
 
         # idx에 해당하는 행에 dout값을 모두 더해주기
-        np.add.at(dW, self.idx, dout)
+        if GPU:
+            np.scatter_add(dW, self.idx, dout)
+        else:
+            np.add.at(dW, self.idx, dout)
         return None
 
 
@@ -161,6 +164,7 @@ class EmbeddingDot:
     def forward(self, h, idx):
         target_W = self.embed.forward(idx)
         out = np.sum(target_W * h, axis=1)
+
         self.cache = (h, target_W)
         return out
 
@@ -171,10 +175,57 @@ class EmbeddingDot:
         # dot 연산에 대한 backward
         # dout의 값에 각각 서로를 바꿔서 곱해준 값이 gradient값
         dtarget_W = dout * h
-        dh = dout * target_W
         # embed 계층 쪽에도 backward 수행
         self.embed.backward(dtarget_W)
+        dh = dout * target_W
         return dh
+
+
+class UnigramSampler:
+    def __init__(self, corpus, power, sample_size):
+        self.sample_size = sample_size
+        self.vocab_size = None
+        self.word_p = None
+
+        # 각 단어가 몇 번씩 나오는지 저장
+        counts = collections.Counter()
+        for word_id in corpus:
+            counts[word_id] += 1
+
+        vocab_size = len(counts)
+        self.vocab_size = vocab_size
+
+        # 각 단어의 출현횟수를 확률로 변환하여 word_p에 저장
+        self.word_p = np.zeros(vocab_size)
+        for i in range(vocab_size):
+            self.word_p[i] = counts[i]
+        self.word_p = np.power(self.word_p, power)
+        self.word_p /= np.sum(self.word_p)
+
+    def get_negative_sample(self, target):
+        batch_size = target.shape[0]
+
+        if not GPU:
+            negative_sample = np.zeros((batch_size, self.sample_size), dtype=np.int32)
+
+            for i in range(batch_size):
+                p = self.word_p.copy()
+
+                # target은 뽑히지 않도록 하기 위해 확률을 0으로 설정
+                target_idx = np.asnumpy(target[i])
+                p[target_idx] = 0
+
+                p /= p.sum()
+                negative_sample[i, :] = np.random.choice(self.vocab_size, size=self.sample_size, \
+                                                         replace=False, p=p)
+        else:
+            # GPU(cupy)를 사용 할 때에는 속도를 우선시
+            # 부정적 예에 타깃이 포함될 수도 있음
+            negative_sample = np.random.choice(self.vocab_size, size=(batch_size, self.sample_size), \
+                                               replace=True, p=self.word_p)
+
+        return negative_sample
+
 
 
 class NegativeSamplingLoss:
@@ -183,7 +234,7 @@ class NegativeSamplingLoss:
         self.sampler = UnigramSampler(corpus, power, sample_size)
 
         # negative sample size에 정답 sample을 위해 1을 더해줌
-        self.loss_layers = [sigmoidWithLoss() for _ in range(sample_size + 1)]
+        self.loss_layers = [SigmoidWithLoss() for _ in range(sample_size + 1)]
         self.embed_dot_layers = [EmbeddingDot(W) for _ in range(sample_size + 1)]
 
         self.params, self.grads = [], []
@@ -217,4 +268,3 @@ class NegativeSamplingLoss:
             dh += embed_dot_layer.backward(dscore)
 
         return dh
-        
