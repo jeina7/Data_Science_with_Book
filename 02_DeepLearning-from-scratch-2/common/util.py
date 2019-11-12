@@ -1,8 +1,8 @@
 # https://github.com/WegraLee/deep-learning-from-scratch-2
 # 필요한 Utility functions
 
-import numpy as np
-import collections
+from .np import *
+import numpy
 
 
 def preprocess(text):
@@ -50,9 +50,9 @@ def create_co_matrix(corpus, window_size=1):
 
 def cos_similarity(x, y, eps=1e-8):
     # normalization
-    nx = x / np.sqrt(np.sum(x**2) + eps)
-    ny = y / np.sqrt(np.sum(y**2) + eps)
-    return np.dot(nx, ny)
+    nx = x / numpy.sqrt(numpy.sum(x**2) + eps)
+    ny = y / numpy.sqrt(numpy.sum(y**2) + eps)
+    return numpy.dot(nx, ny)
 
 
 def most_similar(word, word_to_id, id_to_word, co_matrix, top=5):
@@ -60,20 +60,19 @@ def most_similar(word, word_to_id, id_to_word, co_matrix, top=5):
         print("Could not find word [%s]" % word)
         return
 
-    print('word: ' + word + '\n')
+    print('--- Most similar words for [' + word + '] ---')
 
     word_id = word_to_id[word]
     word_vec = co_matrix[word_id]
 
     vocab_size = len(id_to_word)
-    sim_matrix = np.zeros(vocab_size)
+    sim_matrix = numpy.zeros(vocab_size)
 
     # 모든 vocabulary를 돌면서 similarity 계산
     for i in range(vocab_size):
         sim_matrix[i] = cos_similarity(co_matrix[i], word_vec)
 
     # top의 개수만큼 높은 similarity를 가지는 단어 출력
-    print('Most Similar words')
     count = 0
     for i in reversed(sim_matrix.argsort()):
         if id_to_word[i] == word:
@@ -81,6 +80,7 @@ def most_similar(word, word_to_id, id_to_word, co_matrix, top=5):
         print('[rank %d] %s : %s' % (count+1, id_to_word[i], sim_matrix[i]))
         count += 1
         if count >= top:
+            print("\n", end="")
             return
 
 
@@ -163,34 +163,55 @@ def clip_grads(grads, max_norm):
             grad *= rate
 
 
-class UnigramSampler:
-    def __init__(self, corpus, power, sample_size):
-        self.sample_size = sample_size
-        self.vocab_size = len(set(corpus))
-        self.word_p = np.zeros(self.vocab_size)
+def to_cpu(x):
+    import numpy
+    if type(x) == numpy.ndarray:
+        return x
+    return np.asnumpy(x)
 
-        # 각 단어가 몇 번씩 나오는지 저장
-        counts = collections.Counter(corpus)
 
-        # 각 단어의 출현횟수를 확률로 변환하여 word_p에 저장
-        self.word_p = [counts[i] for i in range(self.vocab_size)]
-        self.word_p = np.power(self.word_p, power)
-        self.word_p /= np.sum(self.word_p)
+def to_gpu(x):
+    import cupy
+    if type(x) == cupy.ndarray:
+        return x
+    return cupy.asarray(x)
 
-    def get_negative_sample(self, target):
-        batch_size = target.shape[0]
 
-        negative_sample = np.zeros((batch_size, self.sample_size), dtype=np.int32)
+def normalize(x):
+    if x.ndim == 2:
+        s = numpy.sqrt((x * x).sum(1))
+        x /= s.reshape((s.shape[0], 1))
+    elif x.ndim == 1:
+        s = numpy.sqrt((x * x).sum())
+        x /= s
+    return x
 
-        for i in range(batch_size):
-            p = self.word_p.copy()
 
-            # target은 뽑히지 않도록 하기 위해 확률을 0으로 설정
-            target_idx = target[i]
-            p[target_idx] = 0
+def analogy(a, b, c, word_to_id, id_to_word, word_matrix, top=5, answer=None):
+    for word in (a, b, c):
+        if word not in word_to_id:
+            print('There is no word [%s] in vocab dictionary.' % word)
+            return
 
-            p /= p.sum()
-            negative_sample[i, :] = np.random.choice(self.vocab_size, size=self.sample_size, \
-                                                     replace=False, p=p)
+    print('[analogy] ' + a + ' : ' + b + ' = ' + c + ' : ?')
+    a_vec, b_vec, c_vec = word_matrix[word_to_id[a]], word_matrix[word_to_id[b]], word_matrix[word_to_id[c]]
+    query_vec = b_vec - a_vec + c_vec
+    query_vec = normalize(query_vec)
 
-        return negative_sample
+    similarity = np.dot(word_matrix, query_vec)
+
+    if answer is not None:
+        print("==>" + answer + ":" + str(np.dot(word_matrix[word_to_id[answer]], query_vec)))
+
+    count = 0
+    for i in (-1 * similarity).argsort():
+        if np.isnan(similarity[i]):
+            continue
+        if id_to_word[i] in (a, b, c):
+            continue
+        print(' {0}: {1}'.format(id_to_word[i], similarity[i]))
+
+        count += 1
+        if count >= top:
+            print("\n", end="")
+            return
