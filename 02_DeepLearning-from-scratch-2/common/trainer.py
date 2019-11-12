@@ -2,8 +2,9 @@
 # 여러가지 training method들을 딥러닝 라이브러리 없이 구현
 
 import time
-import numpy as np
+import numpy
 import matplotlib.pyplot as plt
+from .np import *
 from .util import clip_grads
 
 
@@ -12,13 +13,11 @@ class Trainer:
         self.model = model
         self.optimizer = optimizer
         self.loss_list = []
-        self.log_step = None
 
 
-    def fit(self, x, t, max_epoch=10, batch_size=32, max_grad=None, log_step=20, epoch_log_step=False):
+    def fit(self, x, t, max_epoch=10, batch_size=32, max_grad=None, loss_save_step=20, log_step=False):
         data_size = len(x)
         max_iters = data_size // batch_size
-        self.log_step = log_step
         model, optimizer = self.model, self.optimizer
         curr_loss = 0
         loss_count = 0
@@ -26,16 +25,16 @@ class Trainer:
         start_time = time.time()
         for epoch in range(max_epoch):
             # shuffling
-            idx = np.random.permutation(np.arange(data_size))
-            xs = x[idx]
-            ts = t[idx]
+            idx = numpy.random.permutation(numpy.arange(data_size))
+            x = x[idx]
+            t = t[idx]
 
             for iters in range(max_iters):
-                batch_xs = xs[iters*batch_size:(iters+1)*batch_size]
-                batch_ts = ts[iters*batch_size:(iters+1)*batch_size]
+                batch_x = x[iters*batch_size:(iters+1)*batch_size]
+                batch_t = t[iters*batch_size:(iters+1)*batch_size]
 
                 # loss
-                loss = model.forward(batch_xs, batch_ts)
+                loss = model.forward(batch_x, batch_t)
 
                 # back propagation
                 model.backward()
@@ -53,31 +52,25 @@ class Trainer:
                 loss_count += 1
 
                 # save loss
-                if (iters+1) % self.log_step == 0:
+                if (iters+1) % loss_save_step == 0:
                     avg_loss = curr_loss / loss_count
                     self.loss_list.append(avg_loss)
                     curr_loss, loss_count = 0, 0
 
-                # evaluation
-                if epoch_log_step:
-                    if ((epoch+1) % epoch_log_step == 0) & ((iters+1) % self.log_step == 0):
-                        elapsed_time = time.time() - start_time
-                        print("time %ds | epoch %d | step %d / %d | loss %.2f" % (elapsed_time, epoch+1, \
-                                                                                  iters+1, max_iters, avg_loss))
-                else:
-                    if (iters+1) % self.log_step == 0:
-                        elapsed_time = time.time() - start_time
-                        print("time %ds | epoch %d | step %d / %d | loss %.2f" % (elapsed_time, epoch+1, \
-                                                                                  iters+1, max_iters, avg_loss))
+                # log losses
+                if (iters+1) % log_step == 0:
+                    elapsed_time = time.time() - start_time
+                    print("time %ds | epoch %d | step %d / %d | loss %.2f" % (elapsed_time, epoch+1, \
+                                                                              iters+1, max_iters, avg_loss))
 
 
     def plot(self, ylim=None):
         plt.figure(figsize=(8, 6))
-        x = np.arange(len(self.loss_list))
+        x = numpy.arange(len(self.loss_list))
         if ylim:
             plt.ylim(*ylim)
         plt.plot(x, self.loss_list, label='train')
-        plt.xlabel('iteration (x' + str(self.log_step) + ')')
+        plt.xlabel('iteration (x' + str(log_step) + ')')
         plt.ylabel('loss')
         plt.show()
 
@@ -97,7 +90,8 @@ def remove_duplicate(params, grads):
                     flag = True
                     params.pop(j)
                     grads.pop(j)
-                elif (params[i].ndim == 2) and (params[j].ndim == 2) and (params[i].T.shape == params[j].shape) and np.all(params[i].T == params[j]):
+                elif (params[i].ndim == 2) and (params[j].ndim == 2) and \
+                     (params[i].T.shape == params[j].shape) and np.all(params[i].T == params[j]):
                     grads[i] += grads[j].T
                     flag = True
                     params.pop(j)
