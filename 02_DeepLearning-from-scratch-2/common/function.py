@@ -1,7 +1,7 @@
 # https://github.com/WegraLee/deep-learning-from-scratch-2
 # 여러가지 functions를 딥러닝 라이브러리 없이 구현
 
-import numpy as np
+from .np import *
 
 
 def sigmoid(x):
@@ -14,6 +14,7 @@ def relu(x):
 
 def softmax(x):
     if x.ndim == 2:
+        x = x - x.max(axis=1, keepdims=True)
         x = np.exp(x)
         x /= x.sum(axis=1, keepdims=True)
     elif x.ndim == 1:
