@@ -6,6 +6,7 @@
 # 2) 모든 계층은 변수 params와 grads를 가진다
 
 import collections
+from .config import GPU
 from .np import *
 from .function import softmax, cross_entropy_error
 
@@ -94,6 +95,24 @@ class SigmoidWithLoss:
         batch_size = self.t.shape[0]
 
         dx = (self.y - self.t) * dout / batch_size
+        return dx
+
+
+class Softmax:
+    def __init__(self):
+        self.params, self.grads = [], []
+        self.out = None
+
+
+    def forward(self, x):
+        self.out = softmax(x)
+        return self.out
+
+
+    def backward(self, dout):
+        dx = self.out * dout
+        sumdx = np.sum(dx, axis=1, keepdims=True)
+        dx -= self.out * sumdx
         return dx
 
 
