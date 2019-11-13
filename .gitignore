@@ -5,4 +5,5 @@ dataset-housing/
 *.mp4
 *.env
 *.pkl
+ptb_dataset/
 __pycache__/
